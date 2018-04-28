@@ -1,0 +1,49 @@
+@startuml
+actor 读者
+actor admin
+
+读者->admin:提交
+activate 读者
+admin->图书管理系统:login()
+activate admin
+
+deactivate 读者
+图书管理系统->还书界面:菜单
+activate 还书界面
+deactivate admin
+deactivate 还书界面
+
+还书界面->借书信息:输入编码或扫码
+activate 还书界面
+activate 借书信息
+deactivate 还书界面
+ deactivate 借书信息
+
+借书信息->书目:获取书目
+activate 借书信息
+activate 书目
+deactivate 借书信息
+deactivate 书目
+
+书目->还书界面:确认还书
+activate 还书界面
+activate 书目
+deactivate 还书界面
+deactivate 书目
+
+还书界面->书目:更新书目
+activate 还书界面
+activate 书目
+deactivate 还书界面
+deactivate 书目
+
+还书界面->借书:更新书目
+activate 还书界面
+activate 借书
+deactivate 还书界面
+deactivate 借书
+
+借书->还书界面:还书完成
+activate 借书
+activate 还书界面
+@enduml

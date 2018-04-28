@@ -1,0 +1,34 @@
+@startuml
+actor admin
+
+admin->图书管理系统:扥路
+activate 图书管理系统
+
+图书管理系统->借书界面:menu()
+deactivate 图书管理系统
+
+借书界面->借书:借书
+activate 借书界面
+deactivate 借书界面
+actor 读者
+借书->读者:获取读者信息
+activate 借书
+activate 读者
+
+读者->借书:返回是否符合借书条件
+deactivate 读者
+借书->书目:获取书目信息
+deactivate 借书
+
+借书 ->预订:查看图书是否被预定
+activate 预订
+预订->借书 :可借
+activate 借书
+deactivate 预订
+
+借书->书:创建借书记录
+activate 书
+deactivate 书
+deactivate 借书
+借书->借书界面:借书完成
+@enduml
