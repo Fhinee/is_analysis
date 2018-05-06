@@ -8,61 +8,61 @@
 字段|类型|主键/外键|能否为空|约束|说明
 :---|:---|:--------|:-------|:---|:---
 bookId|varchar(30)|主键|否
-ISBN|varchar(40)| 外键|否
-bookName|varchar(40)| |否
-author|varchar(40)| |否
-publisher|varchar(40)| |否
-summary|varchar(200)| |否
-price|float(20)| |否
-cnum|int(100)| |否
-orderNum|int(100)| |否
-loanNum|int(100)| |否
-oddNum|int(100)| |否
+ISBN|varchar(40)| 外键|是
+bookName|varchar(40)| |是
+author|varchar(40)| |是
+publisher|varchar(40)| |是
+summary|varchar(200)| |是
+price|float(20)| |是
+cnum|int(100)| |是
+orderNum|int(100)| |是
+loanNum|int(100)| |是
+oddNum|int(100)| |是
 
 ### 1.2预约表
 字段|类型|主键/外键|能否为空|约束|说明
 :---|:---|:--------|:-------|:---|:---
 orderId|varchar(30)|主键|否
-ISBN|varchar(40)| 外键|否
-orserDate|date(40)| |否
-author|varchar(40)| |否
-num|int(50)| |否
+ISBN|varchar(40)| 外键|是
+orserDate|date(40)| |是
+author|varchar(40)| |是
+num|int(50)| |是
 
 
 ### 1.3读者表
 字段|类型|主键/外键|能否为空|约束|说明
 :---|:---|:--------|:-------|:---|:---
 readerId|varchar(30)|主键|否
-readerName|varchar(40)|  |否
-password|varchar(40)| |否
-hasLoanNum|int(50)| |否
-maxLoanNum|int(50)| |否
-orderId|varchar(30)|外键|否
+readerName|varchar(40)|  |是
+password|varchar(40)| |是
+hasLoanNum|int(50)| |是
+maxLoanNum|int(50)| |是
+orderId|varchar(30)|外键|是
 
 ### 1.4借阅记录表
 字段|类型|主键/外键|能否为空|约束|说明
 :---|:---|:--------|:-------|:---|:---
 id|int(20)|主键|否
-readerId|varchar(30)|外键|否
-bookId|varchar(30)|外键|否
-loanDate|date(40)| |否
-oddDays|int(30)| |否
+readerId|varchar(30)|外键|是
+bookId|varchar(30)|外键|是
+loanDate|date(40)| |是
+oddDays|int(30)| |是
 
 ###  1.5罚款记录表
 字段|类型|主键/外键|能否为空|约束|说明
 :---|:---|:--------|:-------|:---|:---
 id|int(20)|主键|否
-readerId|varchar(30)|外键|否
-bookId|varchar(30)|外键|否
-overDays|int(30)| |否
-fine|float(20)|  |否
+readerId|varchar(30)|外键|是
+bookId|varchar(30)|外键|是
+overDays|int(30)| |是
+fine|float(20)|  |是
 
 ###  1.6图书管理员表
 字段|类型|主键/外键|能否为空|约束|说明
 :---|:---|:--------|:-------|:---|:---
 managerId|varchar(30)|主键|否
-managerName|varchar(40)|  |否
-password|varchar(40)| |否
+managerName|varchar(40)|  |是
+password|varchar(40)| |是
 
 ## 2.读者管理原型图
 原型图如下：<br>
