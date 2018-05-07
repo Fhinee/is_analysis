@@ -14,19 +14,19 @@ author|varchar(40)| |是
 publisher|varchar(40)| |是
 summary|varchar(200)| |是
 price|float(20)| |是
-cnum|int(100)| |是
-orderNum|int(100)| |是
-loanNum|int(100)| |是
-oddNum|int(100)| |是
+cnum|int(100)| |是| |库存数量
+orderNum|int(100)| |是| |已被预定的数目
+loanNum|int(100)| |是| |已被借出去的数目
+oddNum|int(100)| |是| |剩余数目
 
 ### 1.2预约表
 字段|类型|主键/外键|能否为空|约束|说明
 :---|:---|:--------|:-------|:---|:---
 orderId|varchar(30)|主键|否
 ISBN|varchar(40)| 外键|是
-orserDate|date(40)| |是
+orserDate|date(40)| |是| |预定日期
 author|varchar(40)| |是
-num|int(50)| |是
+num|int(50)| |是| |预定数量
 
 
 ### 1.3读者表
@@ -35,8 +35,8 @@ num|int(50)| |是
 readerId|varchar(30)|主键|否
 readerName|varchar(40)|  |是
 password|varchar(40)| |是
-hasLoanNum|int(50)| |是
-maxLoanNum|int(50)| |是
+hasLoanNum|int(50)| |是| |已借数目
+maxLoanNum|int(50)| |是| |可借最大数目
 orderId|varchar(30)|外键|是
 
 ### 1.4借阅记录表
@@ -46,7 +46,7 @@ id|int(20)|主键|否
 readerId|varchar(30)|外键|是
 bookId|varchar(30)|外键|是
 loanDate|date(40)| |是
-oddDays|int(30)| |是
+oddDays|int(30)| |是| |剩余天数
 
 ###  1.5罚款记录表
 字段|类型|主键/外键|能否为空|约束|说明
@@ -54,8 +54,8 @@ oddDays|int(30)| |是
 id|int(20)|主键|否
 readerId|varchar(30)|外键|是
 bookId|varchar(30)|外键|是
-overDays|int(30)| |是
-fine|float(20)|  |是
+overDays|int(30)| |是| |超过天数
+fine|float(20)|  |是| |罚款金额
 
 ###  1.6图书管理员表
 字段|类型|主键/外键|能否为空|约束|说明
