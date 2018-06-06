@@ -36,7 +36,7 @@
 - [其他流程活动图](用例/其他活动图.md)
 
 ## 7.界面设计
-- [登录界面](https://htmlpreview.github.io/？Fhinee/is_analysis/tree/master/test6/ui/home.html)
+- [登录界面](https://Fhinee.github.io/is_analysis/tree/master/test6/ui/home.html)
 - [上传实验](https://htmlpreview.github.io/？https://github.com/Fhinee/is_analysis/tree/master/test6/ui/上传实验.html)
 - [修改信息](https://htmlpreview.github.io/？https://github.com/Fhinee/is_analysis/tree/master/test6/ui/修改信息.html)
 - [教师发布实验](https://htmlpreview.github.io/？https://github.com/Fhinee/is_analysis/tree/master/test6/ui/发布实验.html)
