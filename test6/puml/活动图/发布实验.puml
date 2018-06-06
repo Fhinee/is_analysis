@@ -1,0 +1,26 @@
+@startuml
+title 活动图 — 教师发布实验
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 20
+skinparam maxmessagesize 60
+skinparam sequenceParticipant underline
+
+actor Teacher
+participant "：首页" as A
+participant "：发布实验" as B
+participant "：实验列表" as C
+participant "：实验表" as D
+
+Teacher ->A : 进入系统
+activate A
+
+A ->B :点击进入
+activate B
+
+B ->D : 填写相应信息，点击发布
+activate D
+
+
+D -->B :提示“发布成功”
+D -->C :新增一条实验记录
+@enduml

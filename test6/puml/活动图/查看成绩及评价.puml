@@ -1,0 +1,24 @@
+@startuml
+title 活动图 — 查看成绩并评价
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 20
+skinparam maxmessagesize 60
+skinparam sequenceParticipant underline
+
+actor Teacher
+participant "：首页" as A
+participant "：成绩列表" as B
+participant "：成绩表" as C
+
+Teacher ->A : 进入系统
+activate A
+
+A ->B : 点击进入
+activate B
+
+B ->C : 选择好班级发送请求：selectAll()
+activate C
+
+C -->B :返回相应结果
+
+@enduml

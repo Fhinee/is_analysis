@@ -1,0 +1,28 @@
+@startuml
+title 活动图 — 选课
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 20
+skinparam maxmessagesize 60
+skinparam sequenceParticipant underline
+
+actor Teacher
+participant "：首页" as A
+participant "：课程列表" as B
+participant "：课程详情" as C
+participant "：课程表" as D
+
+Teacher ->A : 进入系统
+activate A
+
+A ->B : 点击进入
+activate B
+
+B ->C : 选择自己要选的课程
+activate C
+
+C ->D : 点击确认，提交申请
+activate D
+
+D -->C :课程成功被选
+D -->B :课程显示“已选”
+@enduml

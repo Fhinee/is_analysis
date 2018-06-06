@@ -1,0 +1,33 @@
+@startuml
+title 活动图 — 学生上传实验
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 20
+skinparam maxmessagesize 60
+skinparam sequenceParticipant underline
+
+actor Student
+participant "：登录" as A
+participant "：首页" as B
+participant "：实验列表" as C
+participant "：上传实验" as D
+participant "：实验表" as E
+
+Student ->A : 进入系统
+activate A
+
+A ->B : 输入正确的账号、密码
+activate B
+
+B ->C : 点击进入
+activate C
+
+C ->D :实验是否到截止时间
+activate D
+D -->C :未到截止时间
+
+D ->E :填写好信息后插入表
+activate E
+
+E -->D :提示“上传成功”
+E -->C :该条实验不能再操作
+@enduml

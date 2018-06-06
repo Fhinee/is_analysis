@@ -1,0 +1,20 @@
+@startuml
+title 基于GitHub的实验管理平台--用例图
+Teacher -->(登录)
+Teacher -->(编辑资料)
+Teacher -->(选课) : 在学生前选课
+Teacher -->(查看成绩及评价)
+Teacher -->(上传成绩及评价)
+Teacher -->(修改成绩及评价)
+Teacher -->(发布实验)
+Teacher -->(导出成绩表)
+
+(登录)<--:Student:
+(查看成绩及评价)<--:Student:
+(编辑资料)<--:Student:
+(选课)<--:Student:
+(上传实验)<--:Student:
+(导出个人成绩表)<--:Student:
+
+
+@enduml

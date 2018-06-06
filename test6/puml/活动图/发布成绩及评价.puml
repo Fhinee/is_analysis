@@ -1,0 +1,29 @@
+@startuml
+title 活动图 — 教师打分 及评价
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 20
+skinparam maxmessagesize 60
+skinparam sequenceParticipant underline
+
+actor Teacher
+participant "：首页" as A
+participant "：实验列表" as B
+participant "：修改学生成绩" as C
+participant "：成绩列表" as D
+participant "：成绩表" as E
+
+Teacher ->A : 进入系统
+activate A
+
+A ->B : 选择进入
+activate B
+
+B ->C : 选择相应班级
+activate C
+
+C ->E :上传成绩，评价
+
+E -->C :上传成功
+E -->B :状态为“已打分”
+E -->D :返回最新成绩
+@enduml

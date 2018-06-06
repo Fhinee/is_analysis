@@ -1,0 +1,27 @@
+@startuml
+title 活动图 — 管理员创建账号
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 20
+skinparam maxmessagesize 60
+skinparam sequenceParticipant underline
+
+actor Admin
+participant "：首页" as A
+participant "：用户列表" as B
+participant "：添加/编辑用户" as C
+participant "：用户表" as D
+
+Admin ->A : 进入系统
+activate A
+
+A ->B : 选择进入
+activate B
+
+B ->C : 点击进入
+activate C
+
+C ->D :添加/编辑用户信息
+
+D -->C :添加/编辑成功
+D -->B :返回最新用户列表
+@enduml

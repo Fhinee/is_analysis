@@ -1,0 +1,27 @@
+@startuml
+title 活动图 — 导出成绩
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 20
+skinparam maxmessagesize 60
+skinparam sequenceParticipant underline
+
+actor Teacher
+participant "：首页" as A
+participant "：实验列表" as B
+participant "：列表详情" as C
+participant "：成绩表" as D
+
+Teacher ->A : 进入系统
+activate A
+
+A ->B : 选择进入
+activate B
+
+B ->C : 选择相应班级并点击导出
+activate C
+
+C ->D :发送请求
+
+D -->C :返回结果
+C -->Teacher :导出到本地
+@enduml
